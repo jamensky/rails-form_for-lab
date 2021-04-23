@@ -5,6 +5,7 @@ class SchoolClassesController < ApplicationController
     end 
 
     def create
+        biniding.pry
         @class = SchoolClass.new(school_class_params(:first_name, :last_name))
         @class.save
         redirect_to school_class_path(@class)
